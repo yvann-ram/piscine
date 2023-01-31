@@ -3,6 +3,7 @@ Storyboard
   #Personnages
   
   Rob
+  
       1-    Physique  
                 taille= 1.75m
                 poids= 65Kg
@@ -46,6 +47,7 @@ Storyboard
              
              
  Garde 1
+ 
       1-    Physique  
                 taille= 1.90m
                 poids= 85Kg
@@ -79,6 +81,7 @@ Storyboard
                 
      
  Garde 2
+ 
       1-    Physique  
                 taille= 1.90m
                 poids= 85Kg
