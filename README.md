@@ -1,8 +1,5 @@
 Storyboard 
 
-  1.Définir l'histoire et les personnages
-  
-  résumé de l'histoire du jeu, qui décrit les personnages principaux, l'intrigue etles objectifs.
   
   Rob issue d'une famille noble avec deux parents archeologues se voit devenir orphelin après une expedition menant à leur disparition.
   Rob n'a que 13 ans mais il est persuadé de pouvoir retrouver sa famille.
