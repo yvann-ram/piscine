@@ -156,7 +156,8 @@ Storyboard
     2.	Deux gardes, une porte verrouillée, une clé
     Davantage de garde, il faudra que le joueur récupère une clé pour déverrouiller la porte vers le niveau suivant
     **Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 2 gardes, le joueur doit atteindre la porte de sortie pour revenir au niveau.
-    3.	Trois/quatre gardes, un coffre, une clé, une porte verrouillée
+    3.	Quatre gardes, un coffre, un code à récupérer pour le  coffre, une clé, une porte verrouillée
+    **Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 4 gardes, le joueur doit atteindre la porte de sortie pour revenir au niveau.
 
 
     Eléments de gameplay
