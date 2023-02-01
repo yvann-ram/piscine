@@ -37,10 +37,10 @@ while True:
 
     #Bouton Play & Score
     police = pygame.font.SysFont("monospace", 50)
-    TextPlay = police.render("P = Play", 1,(255,0,0))
-    TextScore = police.render("S = Score", 1, (255, 0, 0))
-    screen.blit(TextPlay,(650,500))
-    screen.blit(TextScore,(650, 550))
+    TextPlay = police.render("'P' = Play", 1,(255,0,0))
+    TextScore = police.render("'S' = Score", 1, (255, 0, 0))
+    screen.blit(TextPlay,(640,500))
+    screen.blit(TextScore,(640, 550))
 
     #????
     pygame.display.update()
