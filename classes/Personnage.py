@@ -29,9 +29,6 @@ class Personnage(pygame.sprite.Sprite):
 
         self.image = self.images[self.index]
 
-    def debug(self):
-        print("position:", self.rect.x, self.rect.y)
-
     # <editor-fold desc="Controllers">
 
     def move_left(self, speed=5):

@@ -8,14 +8,16 @@ from classes.Objet import Objet
 pygame.init()
 
 # CREATING CANVAS
-screen = pygame.display.set_mode((800, 800))
+computer_info = pygame.display.Info()  # longueur, largeur de l'écran du PC
+
+screen = pygame.display.set_mode((1280, 720))
 inventaire = Inventaire()
 cle_porte = Objet("clé de la porte", 1)
 cle_coffre = Objet("clé du coffre", 1)
 personnage = Personnage(inventaire, (400, 400))
-inventaire.Add(cle_porte)
-inventaire.Add(cle_coffre)
-inventaire.Remove(cle_porte)
+inventaire.add_item(cle_porte)
+inventaire.add_item(cle_coffre)
+inventaire.remove_item(cle_porte)
 
 # TITLE OF CANVAS
 pygame.display.set_caption("Rob's quest")
