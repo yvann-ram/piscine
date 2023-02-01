@@ -155,11 +155,11 @@ Storyboard
     Le joueur devra atteindre la porte pour passer le niveau supérieur
     2.	Deux gardes, une porte verrouillée, une clé
     Davantage de garde, il faudra que le joueur récupère une clé pour déverrouiller la porte vers le niveau suivant
-    **Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 2 gardes, le joueur doit atteindre la porte de sortie pour revenir au niveau.
+    A partir d'ici, si le joueur se fait attrapé, il va en prison.
     3.	Quatre gardes, un coffre, un code à récupérer pour le  coffre, une clé, une porte verrouillée
     Reconstitution des artefact à la récupération du dernier, puis révélation du message codé en hiéroglyphe.
     Fin.
-    **Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 4 gardes, le joueur doit atteindre la porte de sortie pour revenir au niveau.
+    **PRISON: Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 2 gardes au niveau 2 et 4 gardes au niveau 3, le joueur doit atteindre la porte de sortie pour revenir au niveau où il était attrapé.
 
 
     Eléments de gameplay
