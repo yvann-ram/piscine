@@ -1,3 +1,0 @@
-		ROB THE ROBBER
-Rob est un voleur qui se déplace dans le labyrinthe du décor tout en évitant
-les gardes pour ne pas se faire arrété...
