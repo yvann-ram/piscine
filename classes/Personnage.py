@@ -1,12 +1,12 @@
 import pygame
-from Inventaire import Inventaire
+from classes.Inventaire import Inventaire
 
 
 class Personnage(pygame.sprite.Sprite):
     images = []
     inventaire: Inventaire
 
-    def __init__(self, inventaire):
+    def __init__(self, inventaire, spawn_pos):
         super(Personnage, self).__init__()
         self.images = []
         self.index = 0
@@ -18,6 +18,8 @@ class Personnage(pygame.sprite.Sprite):
         self.image = self.images[self.index]
 
         self.rect = self.image.get_rect()
+        self.rect.x = spawn_pos[0]
+        self.rect.y = spawn_pos[1]
 
     def update(self):
         self.index += 1

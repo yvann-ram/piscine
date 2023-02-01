@@ -10,7 +10,12 @@ pygame.init()
 # CREATING CANVAS
 screen = pygame.display.set_mode((800, 800))
 inventaire = Inventaire()
-personnage = Personnage(inventaire)
+cle_porte = Objet("clé de la porte", 1)
+cle_coffre = Objet("clé du coffre", 1)
+personnage = Personnage(inventaire, (400, 400))
+inventaire.Add(cle_porte)
+inventaire.Add(cle_coffre)
+inventaire.Remove(cle_porte)
 
 # TITLE OF CANVAS
 pygame.display.set_caption("Rob's quest")
@@ -25,7 +30,6 @@ while not exit:
         if event.type == pygame.QUIT:
             exit = True
 
-        keys = pygame.key.get_pressed()
         if event.type == KEYDOWN:
             if event.key == K_LEFT:
                 personnage.move_left()
