@@ -154,8 +154,8 @@ Storyboard
     1.	Introduction, une garde, une porte
     Le joueur devra atteindre la porte pour passer le niveau supérieur
     2.	Deux gardes, une porte verrouillée, une clé
-    (À partir d’ici, il est sensé tomber en prison s’il se fait attraper)
     Davantage de garde, il faudra que le joueur récupère une clé pour déverrouiller la porte vers le niveau suivant
+    **Si le joueur se fait attrapé par une des gardes il va en prison: il y aura 2 gardes, le joueur doit atteindre la porte de sortie pour revenir au niveau.
     3.	Trois/quatre gardes, un coffre, une clé, une porte verrouillée
 
 
