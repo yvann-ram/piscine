@@ -14,8 +14,8 @@ display.set_caption("Rob's Quest")
 image = pygame.image.load("ssets/logoA.png")
 
 #Musique de fond
-pygame.mixer.music.load("ssets/menuson.mp3")
-pygame.mixer.music.play()
+# pygame.mixer.music.load("ssets/menuson.mp3")
+# pygame.mixer.music.play()
 
 #Boucle des evennements
 while True:
