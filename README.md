@@ -146,9 +146,26 @@ Storyboard
     6- Climax
             Rob à collectionné toutes le pieces 
             
-            
-            
-              
+# Plan détaillé
+
+    Les niveaux
+    (Optionnel) : si les gardes trouvent Rob, il est envoyé en prison ou il doit s’enfuir sans se refaire attraper, tout simplement.
+
+    1.	Introduction, une garde, une porte
+    Le joueur devra atteindre la porte pour passer le niveau supérieur
+    2.	Deux gardes, une porte verrouillée, une clé
+    (À partir d’ici, il est sensé tomber en prison s’il se fait attraper)
+    Davantage de garde, il faudra que le joueur récupère une clé pour déverrouiller la porte vers le niveau suivant
+    3.	Trois/quatre gardes, un coffre, une clé, une porte verrouillée
+
+
+    Eléments de gameplay
+    -	Note (feuille) contenant des indications en hiéroglyphe, décodé par la caractéristique unique du personnage, au sujet du prochain niveau, cette note est         gardée par un garde qui fait un trajet différent des autres qui est fixe
+    -	Coffre permettant d’obtenir un gain de score ou des objets
+    -	Un timer
+    -	Clé pour ouvrir les portes verrouillées
+    -	Portes ouvertes/verrouillées pour passer d’un niveau à l’autre
+
               
               
 
