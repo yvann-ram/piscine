@@ -11,7 +11,7 @@ class Inventaire(object):
     def get_inventory(self):
         return self.inventaire
 
-    def get_objects(self):
+    def get_objects(self):  # pour débug principalement
         objects = []
         for obj in self.inventaire:
             objects += [[obj.nom, obj.count, obj.nom_image]]
@@ -46,10 +46,10 @@ class Inventaire(object):
             if obj.nom == objet.nom:
                 exist = True
 
-                if obj.count > 1:
+                if obj.count > 1:  # si il a plus d'un objet, n'en n'enlève qu'un
                     obj.count -= 1
                 else:
-                    self.inventaire.remove(obj)
+                    self.inventaire.remove(obj)  # sinon retirer complètement l'objet
 
         if not exist:
             print("l'objet n'existe pas")

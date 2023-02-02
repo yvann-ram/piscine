@@ -15,7 +15,7 @@ class Objet(pygame.sprite.Sprite):
         self.count = count
         self.image = pygame.image.load(image).convert_alpha()
         self.nom_image = image
-        if spawn_pos != 0:
+        if spawn_pos != 0:  # pour l'afficher à l'écran (exemple: la clé)
             self.rect = self.image.get_rect()
             self.rect.x = spawn_pos[0]
             self.rect.y = spawn_pos[1]
