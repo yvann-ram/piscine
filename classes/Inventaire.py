@@ -36,7 +36,7 @@ class Inventaire(object):
             if not already_exist:
                 self.inventaire.append(objet)
 
-            print("l'objet " + objet.nom + " a été ajouté à l'inventaire")
+            # print("l'objet " + objet.nom + " a été ajouté à l'inventaire")  # debug
         except:
             print("une erreur s'est produite")
 

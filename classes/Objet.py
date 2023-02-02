@@ -19,3 +19,8 @@ class Objet(pygame.sprite.Sprite):
             self.rect = self.image.get_rect()
             self.rect.x = spawn_pos[0]
             self.rect.y = spawn_pos[1]
+
+    def notify(self, police, state: str):  # notification pop-up sur l'ajout/suppression d'un objet dans l'inventaire
+        nom_objet = self.nom
+
+        return police.render(state + " " + nom_objet, True, (0, 0, 0))
