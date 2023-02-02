@@ -1,5 +1,5 @@
 import pygame
-from Objet import Objet
+from classes.Objet import Objet
 
 
 class Inventaire(object):

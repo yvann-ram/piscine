@@ -1,6 +1,7 @@
 import pygame
-from Inventaire import Inventaire
-
+from classes.Inventaire import Inventaire
+from pygame import mixer
+import time
 
 class Personnage(pygame.sprite.Sprite):
     images = []
@@ -27,21 +28,28 @@ class Personnage(pygame.sprite.Sprite):
 
         self.image = self.images[self.index]
 
-    def debug(self):
-        print("position:", self.rect.x, self.rect.y)
+    mixer.init()
+    mixer.set_num_channels(8)
+    pas=mixer.Channel(2)
+    foot_sound = mixer.Sound("Sound/footstep_concrete.wav")
+    def bruitdepas(self):
+        if not self.pas.get_busy():
+            self.pas.play(self.foot_sound)
 
     # <editor-fold desc="Controllers">
 
     def move_left(self, speed=5):
         self.rect.x -= speed
-
+        self.bruitdepas()
     def move_right(self, speed=5):
         self.rect.x += speed
-
+        self.bruitdepas()
     def move_up(self, speed=5):
         self.rect.y -= speed
-
+        self.bruitdepas()
     def move_down(self, speed=5):
         self.rect.y += speed
-
+        self.bruitdepas()
     # </editor-fold>
+
+    #Sounds effect
