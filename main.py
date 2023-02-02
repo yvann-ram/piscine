@@ -35,6 +35,8 @@ pytmx_map = load_pygame("assets/map3.tmx")  # pygame.image.load("assets/map3.png
 police = pygame.font.SysFont("monospace", 25)
 start = 0
 
+dx_correction = 0
+dy_correction = 0
 
 while not exit:
     clock.tick(30)  # frame par seconde
@@ -52,8 +54,11 @@ while not exit:
         if isinstance(layer, pytmx.TiledObjectGroup):
             if layer.name == "Collisions":
                 for obj in layer:
-                    if personnage.rect.colliderect(pygame.Rect(obj.x, obj.y, obj.width, obj.height)):
+                    collision = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
+                    if personnage.rect.colliderect(collision):
                         collide = True
+                        dx_correction = (collision.left, collision.right)
+                        dy_correction = (collision.top, collision.bottom)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -65,28 +70,32 @@ while not exit:
                     personnage.move_left()
                     personnage.update_left()
                 else:
-                    personnage.rect.x += 10
+                    personnage.rect.x += dx_correction[1] - personnage.rect.left
+
                     collide = False
             elif event.key == K_RIGHT:
                 if not collide:
                     personnage.move_right()
                     personnage.update_right()
                 else:
-                    personnage.rect.x -= 10
+                    personnage.rect.x += dx_correction[0] - personnage.rect.right
+
                     collide = False
             elif event.key == K_UP:
                 if not collide:
                     personnage.move_up()
                     personnage.update_back()
                 else:
-                    personnage.rect.y += 30
+                    personnage.rect.y += dy_correction[1] - personnage.rect.top
+
                     collide = False
             elif event.key == K_DOWN:
                 if not collide:
                     personnage.move_down()
                     personnage.update_front()
                 else:
-                    personnage.rect.y -= 30
+                    personnage.rect.y += dy_correction[0] - personnage.rect.bottom
+
                     collide = False
 
         if event.type == KEYUP:

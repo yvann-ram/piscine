@@ -20,9 +20,7 @@ class Personnage(pygame.sprite.Sprite):
         inventaire = Inventaire()
         self.inventaire = inventaire
 
-        # self.images.append(pygame.image.load('assets/playeridle.png').convert_alpha())
-        # self.images.append(pygame.image.load('assets/playerrun1.png').convert_alpha())
-        # self.images.append(pygame.image.load('assets/playerrun2.png').convert_alpha())
+        # <editor-fold desc="models">
 
         self.images_left.append(pygame.transform.scale(pygame.image.load('assets/rob_idle_left.png').convert_alpha(), (39, 53)))
         self.images_left.append(pygame.transform.scale(pygame.image.load('assets/rob_run_left1.png').convert_alpha(), (39, 53)))
@@ -40,10 +38,14 @@ class Personnage(pygame.sprite.Sprite):
         self.images_back.append(pygame.transform.scale(pygame.image.load('assets/rob_run_back1.png').convert_alpha(), (39, 53)))
         self.images_back.append(pygame.transform.scale(pygame.image.load('assets/rob_run_back2.png').convert_alpha(), (39, 53)))
 
+        # </editor-fold>
+
         self.image = self.images_front[self.index]
         self.rect = self.image.get_rect()
         self.rect.x = spawn_pos[0]
         self.rect.y = spawn_pos[1]
+
+    # <editor-fold desc="Mouvements">
 
     def update_left(self):
         self.index += 1
@@ -76,6 +78,8 @@ class Personnage(pygame.sprite.Sprite):
             self.index = 0
 
         self.image = self.images_back[self.index]
+
+    # </editor-fold>
 
     # <editor-fold desc="Controllers">
 
