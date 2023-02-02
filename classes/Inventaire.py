@@ -11,7 +11,14 @@ class Inventaire(object):
     def get_inventory(self):
         return self.inventaire
 
-    def get_object_by_name(self, objet: str):
+    def get_objects(self):
+        objects = []
+        for obj in self.inventaire:
+            objects += [[obj.nom, obj.count, obj.nom_image]]
+
+        return objects
+
+    def has_object_by_name(self, objet: str):
         for obj in self.inventaire:
             if obj.nom == objet:
                 return True
@@ -20,24 +27,29 @@ class Inventaire(object):
 
     def add_item(self, objet: Objet):
         try:
+            already_exist = False
             for obj in self.inventaire:
                 if obj.nom == objet.nom:
-                    if obj.count > 1:
-                        obj.count += 1
-                    else:
-                        self.inventaire.append(objet)
+                    already_exist = True
+                    obj.count += 1
+
+            if not already_exist:
+                self.inventaire.append(objet)
+
             print("l'objet " + objet.nom + " a été ajouté à l'inventaire")
         except:
             print("une erreur s'est produite")
 
     def remove_item(self, objet: Objet):
+        exist = False
         for obj in self.inventaire:
-            print(obj.nom, obj.count)
-            print(objet.nom, objet.count)
             if obj.nom == objet.nom:
+                exist = True
+
                 if obj.count > 1:
                     obj.count -= 1
                 else:
                     self.inventaire.remove(obj)
-            print("aa", obj.nom)
 
+        if not exist:
+            print("l'objet n'existe pas")

@@ -4,12 +4,14 @@ from classes.Inventaire import Inventaire
 
 class Personnage(pygame.sprite.Sprite):
     images = []
-    inventaire: Inventaire
+    inventaire: Inventaire = []
 
-    def __init__(self, inventaire, spawn_pos):
+    def __init__(self, spawn_pos):
         super(Personnage, self).__init__()
-        self.images = []
+        self.images = []  # liste des images pour l'animation
         self.index = 0
+
+        inventaire = Inventaire()
         self.inventaire = inventaire
 
         self.images.append(pygame.transform.scale(pygame.image.load('assets/playeridle.png').convert_alpha(), (50, 80)))
