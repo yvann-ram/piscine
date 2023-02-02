@@ -12,19 +12,14 @@ pygame.init()
 # CREATING CANVAS
 computer_info = pygame.display.Info()  # longueur, largeur de l'écran du PC
 
-min_width, min_height = 1700, 900
+min_width, min_height = 1600, 900
 
 screen = pygame.display.set_mode((min_width, min_height))
 cle_porte = Objet("clé de la porte", 1, 'assets/test_cle.png', (600, 600))
 cle_coffre = Objet("clé du coffre", 1, 'assets/test_cle.png', 0)
 personnage = Personnage((450, 400))
 
-# personnage.inventaire.add_item(cle_porte)
-# personnage.inventaire.add_item(cle_coffre)
-# personnage.inventaire.remove_item(cle_porte)
-# print(personnage.inventaire.get_objects())
-
-# TITLE OF CANVAS
+# GENERAL
 pygame.display.set_caption("Rob's quest")
 exit = False
 clock = pygame.time.Clock()
@@ -39,6 +34,7 @@ pytmx_map = load_pygame("assets/map3.tmx")  # pygame.image.load("assets/map3.png
 
 police = pygame.font.SysFont("monospace", 25)
 start = 0
+
 
 while not exit:
     clock.tick(30)  # frame par seconde
@@ -67,34 +63,34 @@ while not exit:
             if event.key == K_LEFT:
                 if not collide:
                     personnage.move_left()
-                    personnage.update()
+                    personnage.update_left()
                 else:
                     personnage.rect.x += 10
                     collide = False
             elif event.key == K_RIGHT:
                 if not collide:
                     personnage.move_right()
-                    personnage.update()
+                    personnage.update_right()
                 else:
                     personnage.rect.x -= 10
                     collide = False
             elif event.key == K_UP:
                 if not collide:
                     personnage.move_up()
-                    personnage.update()
+                    personnage.update_back()
                 else:
-                    personnage.rect.y += 20
+                    personnage.rect.y += 30
                     collide = False
             elif event.key == K_DOWN:
                 if not collide:
                     personnage.move_down()
-                    personnage.update()
+                    personnage.update_front()
                 else:
-                    personnage.rect.y -= 20
+                    personnage.rect.y -= 30
                     collide = False
 
         if event.type == KEYUP:
-            personnage.image = personnage.images[0]  # reprend l'image de la position fixe/statique
+            personnage.image = personnage.images_front[0]  # reprend l'image de la position fixe/statique
             personnage.index = 0
 
     if personnage.rect.colliderect(cle_porte.rect):
