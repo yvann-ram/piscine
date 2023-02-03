@@ -31,7 +31,7 @@ class Personnage(pygame.sprite.Sprite):
     mixer.init()
     mixer.set_num_channels(8)
     pas=mixer.Channel(2)
-    foot_sound = mixer.Sound("Sound/footstep_concrete.wav")
+    foot_sound = mixer.Sound("Sound/Footstep_concrete.wav")
     def bruitdepas(self):
         if not self.pas.get_busy():
             self.pas.play(self.foot_sound)
