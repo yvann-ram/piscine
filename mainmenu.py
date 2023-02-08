@@ -11,7 +11,7 @@ screen = display.set_mode((1530, 780))
 display.set_caption("Rob's Quest")
 
 #Image de Fond
-image = pygame.image.load("ssets/logoA.png")
+image = pygame.image.load("assets/LogoA.png")
 
 #Musique de fond
 # pygame.mixer.music.load("ssets/menuson.mp3")

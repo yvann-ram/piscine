@@ -35,7 +35,7 @@ collide = False
 pytmx_map_1 = load_pygame("assets/map1.tmx")  # pygame.image.load("assets/map3.png")
 pytmx_map_2 = load_pygame("assets/map2.tmx")  # pygame.image.load("assets/map3.png")
 pytmx_map_final = load_pygame("assets/map3.tmx")  # pygame.image.load("assets/map3.png")
-main_menu_image = pygame.image.load("ssets/logoA.png")
+main_menu_image = pygame.image.load("assets/logoA.png")
 
 police = pygame.font.SysFont("monospace", 25)
 start = 0
