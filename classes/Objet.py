@@ -6,7 +6,7 @@ class Objet(pygame.sprite.Sprite):
     count = 0
     image = ''
     nom_image = image
-    spawn_pos = ()
+    spawn_pos = []
 
     def __init__(self, nom, count, image, spawn_pos):
         super(Objet, self).__init__()

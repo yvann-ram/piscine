@@ -1,0 +1,11 @@
+Fenêtre qui s'ouvre/se ferme
+Porte qui s'ouvre/se ferme
+Bruit de clé
+Bruit de coffre
+Pas de Rob
+Pas du garde
+Garde qui attrape
+Bruit de sirène
+Bruit de victoire
+Bruit de visctoire finale
+Reconstitution puzzle
